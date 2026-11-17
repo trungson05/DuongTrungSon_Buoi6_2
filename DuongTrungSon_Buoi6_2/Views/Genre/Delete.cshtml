@@ -1,0 +1,28 @@
+@model DuongTrungSon_Buoi6_2.Models.Genre
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>DuongTrungSon_Buoi6_2.Models.Genre</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.GenreName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.GenreName)
+        </dd>
+    </dl>
+    <!-- Hiển thị thông báo lỗi từ ModelState -->
+    <div asp-validation-summary="All" class="text-danger fw-bold mb-3"></div>
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="GenreId" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>
